@@ -28,9 +28,6 @@ import com.dtstack.flinkx.writer.BaseDataWriter;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.datastream.DataStreamSink;
 import org.apache.flink.types.Row;
-import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -47,7 +44,6 @@ import static com.dtstack.flinkx.rdb.datawriter.JdbcConfigKeys.*;
  *
  * @author huyifan.zju@163.com
  */
-@Service
 public class JdbcDataWriter extends BaseDataWriter {
 
     protected DatabaseInterface databaseInterface;
