@@ -1,0 +1,76 @@
+{
+  "job": {
+    "setting": {
+      "speed": {
+        "channel": 1,
+        "bytes": 0
+      },
+      "errorLimit": {
+        "record": 100
+      },
+      "restore": {
+        "maxRowNumForCheckpoint": 0,
+        "isRestore": false,
+        "restoreColumnName": "",
+        "restoreColumnIndex": 0
+      },
+      "log": {
+        "isLogger": false,
+        "level": "debug",
+        "path": "",
+        "pattern": ""
+      }
+    },
+    "content": [
+      {
+        "reader": {
+          "name": "mysqlreader",
+          "parameter": {
+            "username": "root",
+            "password": "root",
+            "column": [
+              "id",
+              "name",
+              "age",
+              "last_update_date"
+            ],
+            "splitPk": "",
+            "connection": [
+              {
+                "table": [
+                  "user"
+                ],
+                "jdbcUrl": [
+                  "jdbc:mysql://localhost:3306/qiandu"
+                ]
+              }
+            ]
+          }
+        },
+        "writer": {
+          "name": "clickhousewriter",
+          "parameter": {
+            "username": "default",
+            "password": "qiandu",
+            "writeMode": "insert",
+            "column": [
+              "name",
+              "age",
+              "id",
+              "last_update_date"
+            ],
+            "batchFlag" : "Y",
+            "connection": [
+              {
+                "table": [
+                  "user"
+                ],
+                "jdbcUrl": "jdbc:clickhouse://localhost:8123"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  }
+}
