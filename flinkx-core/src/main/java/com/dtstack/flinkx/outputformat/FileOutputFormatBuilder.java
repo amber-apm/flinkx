@@ -19,7 +19,7 @@
 
 package com.dtstack.flinkx.outputformat;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.nio.charset.Charset;
 import java.nio.charset.UnsupportedCharsetException;

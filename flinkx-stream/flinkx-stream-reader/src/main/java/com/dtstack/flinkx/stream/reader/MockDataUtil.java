@@ -21,7 +21,7 @@ package com.dtstack.flinkx.stream.reader;
 import com.dtstack.flinkx.reader.MetaColumn;
 import com.github.jsonzou.jmockdata.JMockData;
 import com.github.jsonzou.jmockdata.MockConfig;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.flink.types.Row;
 

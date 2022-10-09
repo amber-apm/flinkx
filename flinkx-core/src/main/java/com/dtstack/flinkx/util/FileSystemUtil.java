@@ -21,7 +21,7 @@ package com.dtstack.flinkx.util;
 
 import com.dtstack.flinkx.authenticate.KerberosUtil;
 import org.apache.commons.collections.MapUtils;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.mapred.JobConf;
