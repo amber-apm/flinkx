@@ -22,7 +22,7 @@ import com.dtstack.flinkx.inputformat.BaseRichInputFormatBuilder;
 import com.dtstack.flinkx.rdb.DataSource;
 import com.dtstack.flinkx.rdb.DatabaseInterface;
 import com.dtstack.flinkx.reader.MetaColumn;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.ArrayList;
 import java.util.List;

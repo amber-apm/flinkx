@@ -27,7 +27,7 @@ import com.dtstack.flinkx.rdb.inputformat.DistributedJdbcInputFormatBuilder;
 import com.dtstack.flinkx.rdb.util.DbUtil;
 import com.dtstack.flinkx.reader.BaseDataReader;
 import com.dtstack.flinkx.reader.MetaColumn;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.flink.streaming.api.datastream.DataStream;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 import org.apache.flink.types.Row;

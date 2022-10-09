@@ -26,7 +26,7 @@ import com.dtstack.flinkx.util.ExceptionUtil;
 import com.dtstack.flinkx.util.GsonUtil;
 import com.dtstack.flinkx.util.SysUtil;
 import com.dtstack.flinkx.util.TelnetUtil;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.flink.util.CollectionUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

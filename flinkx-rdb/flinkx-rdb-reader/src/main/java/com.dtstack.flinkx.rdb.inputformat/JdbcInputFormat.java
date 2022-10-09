@@ -575,19 +575,19 @@ public class JdbcInputFormat extends BaseRichInputFormat {
         LOG.info("buildIncrementFilter, incrementColType = {}, incrementCol = {}, startLocation = {}, endLocation = {}, customSql = {}, useMaxFunc = {}", incrementColType, incrementCol, startLocation, endLocation, customSql, useMaxFunc);
         StringBuilder filter = new StringBuilder(128);
 
-        if (org.apache.commons.lang.StringUtils.isNotEmpty(customSql)) {
+        if (StringUtils.isNotEmpty(customSql)) {
             incrementCol = String.format("%s.%s", DbUtil.TEMPORARY_TABLE_NAME, databaseInterface.quoteColumn(incrementCol));
         } else {
             incrementCol = databaseInterface.quoteColumn(incrementCol);
         }
 
         String startFilter = buildStartLocationSql(incrementColType, incrementCol, startLocation, useMaxFunc);
-        if (org.apache.commons.lang.StringUtils.isNotEmpty(startFilter)) {
+        if (StringUtils.isNotEmpty(startFilter)) {
             filter.append(startFilter);
         }
 
         String endFilter = buildEndLocationSql(incrementColType, incrementCol, endLocation);
-        if (org.apache.commons.lang.StringUtils.isNotEmpty(endFilter)) {
+        if (StringUtils.isNotEmpty(endFilter)) {
             if (filter.length() > 0) {
                 filter.append(" and ").append(endFilter);
             } else {
@@ -608,7 +608,7 @@ public class JdbcInputFormat extends BaseRichInputFormat {
      * @return
      */
     protected String buildStartLocationSql(String incrementColType, String incrementCol, String startLocation, boolean useMaxFunc) {
-        if (org.apache.commons.lang.StringUtils.isEmpty(startLocation) || DbUtil.NULL_STRING.equalsIgnoreCase(startLocation)) {
+        if (StringUtils.isEmpty(startLocation) || DbUtil.NULL_STRING.equalsIgnoreCase(startLocation)) {
             return null;
         }
 
@@ -631,7 +631,7 @@ public class JdbcInputFormat extends BaseRichInputFormat {
      * @return
      */
     public String buildEndLocationSql(String incrementColType, String incrementCol, String endLocation) {
-        if (org.apache.commons.lang.StringUtils.isEmpty(endLocation) || DbUtil.NULL_STRING.equalsIgnoreCase(endLocation)) {
+        if (StringUtils.isEmpty(endLocation) || DbUtil.NULL_STRING.equalsIgnoreCase(endLocation)) {
             return null;
         }
 

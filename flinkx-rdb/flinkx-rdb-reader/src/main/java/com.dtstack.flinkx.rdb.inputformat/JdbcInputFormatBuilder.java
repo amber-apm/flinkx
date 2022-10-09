@@ -24,7 +24,7 @@ import com.dtstack.flinkx.rdb.DatabaseInterface;
 import com.dtstack.flinkx.rdb.datareader.IncrementConfig;
 import com.dtstack.flinkx.rdb.type.TypeConverterInterface;
 import com.dtstack.flinkx.reader.MetaColumn;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
 import java.util.Map;

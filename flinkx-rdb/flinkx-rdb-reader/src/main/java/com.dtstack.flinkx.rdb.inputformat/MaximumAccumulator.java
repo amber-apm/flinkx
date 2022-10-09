@@ -19,7 +19,7 @@
 
 package com.dtstack.flinkx.rdb.inputformat;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.math.NumberUtils;
 import org.apache.flink.api.common.accumulators.Accumulator;
 
